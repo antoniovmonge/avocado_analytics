@@ -36,8 +36,10 @@ app.layout = html.Div(
             ],
             className="header",
         ),
+        # DROPDOWNS
         html.Div(
             children=[
+                # DROPDOWN REGION
                 html.Div(
                     children=[
                         html.Div(children="Region", className="menu-title"),
@@ -53,6 +55,7 @@ app.layout = html.Div(
                         ),
                     ]
                 ),
+                # DROPDOWN TYPE
                 html.Div(
                     children=[
                         html.Div(children="Type", className="menu-title"),
@@ -69,6 +72,7 @@ app.layout = html.Div(
                         ),
                     ],
                 ),
+                # DATE SELECTOR
                 html.Div(
                     children=[
                         html.Div(
@@ -87,14 +91,17 @@ app.layout = html.Div(
             ],
             className="menu",
         ),
+        # CHARTS
         html.Div(
             children=[
+                # CHART PRICES
                 html.Div(
                     children=dcc.Graph(
                         id="price-chart", config={"displayModeBar": False},
                     ),
                     className="card",
                 ),
+                # CHART SOLD
                 html.Div(
                     children=dcc.Graph(
                         id="volume-chart", config={"displayModeBar": False},
