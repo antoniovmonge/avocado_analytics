@@ -16,6 +16,8 @@ external_stylesheets = [
         "rel": "stylesheet",
     },
 ]
+server = app.server
+
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.title = "Avocado Analytics"
 
@@ -109,6 +111,12 @@ app.layout = html.Div(
             ],
             className="wrapper",
         ),
+        html.Img(
+                        src=app.get_asset_url("antonio_green.svg"),
+                        className="logo",
+                    ),
+        html.Br(),
+        html.Br(),
     ]
 )
 
